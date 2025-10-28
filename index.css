@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Fraunces:wght@700&display=swap');
+
+:root {
+  --green-500: hsl(158, 36%, 37%);
+  --green-700: hsl(158, 42%, 18%);
+  
+  --black: hsl(212, 21%, 14%);
+  --grey: hsl(228, 12%, 48%);
+  --cream: hsl(30, 38%, 92%);
+  --white: hsl(0, 0%, 100%);
+  
+  --font-montserrat: 'Montserrat', sans-serif;
+  --font-fraunces: 'Fraunces', serif;
+  --font-size-paragraph: 14px;
+  --font-weight-500: 500;
+  --font-weight-700: 700;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+@media (max-width: 26.7857rem) {
+  /* Your mobile styles here */
+}
+
+@media (min-width: 102.8571rem) {
+  /* Your desktop styles here */
+}
