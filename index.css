@@ -24,10 +24,153 @@
   padding: 0;
 }
 
-@media (max-width: 26.7857rem) {
-  /* Your mobile styles here */
+body {
+  background-color: var(--cream);
+  font-family: var(--font-montserrat);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
 }
 
+.category {
+  color: var(--grey);
+  font-size: 12px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+}
+
+h1 {
+  color: var(--black);
+  font-family: var(--font-fraunces);
+  font-size: 32px;
+  font-weight: var(--font-weight-700);
+  line-height: 1.1;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  width: 100%;
+  background-color: var(--white);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.image {
+  width: 100%;
+}
+
+.image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 24px;
+}
+
+.description {
+  color: var(--grey);
+  font-size: var(--font-size-paragraph);
+  line-height: 1.7;
+}
+
+.price {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+  color: var(--green-700);
+  font-family: var(--font-fraunces);
+  font-size: 28px;
+  font-weight: var(--font-weight-700);
+}
+
+.price .old-price {
+  font-family: var(--font-montserrat);
+  text-decoration: line-through;
+  color: var(--grey);
+  font-size: 14px;
+  font-weight: var(--font-weight-500);
+}
+
+button {
+  font-family: var(--font-montserrat);
+  background-color: var(--green-500);
+  color: var(--white);
+  border: none;
+  border-radius: 8px;
+  padding: 15px;
+  font-size: 12px;
+  font-weight: var(--font-weight-700);
+  letter-spacing: 2px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  transition: background-color 0.3s;
+  width: 100%;
+}
+
+button:hover {
+  background-color: var(--green-700);
+}
+
+/* Mobile: 375px (ảnh trên, content dưới) */
+@media (max-width: 26.7857rem) {
+  .container {
+    flex-direction: column;
+  }
+
+  .image img {
+    width: 100%;
+    height: auto; /* bỏ height cố định */
+    border-radius: 10px 10px 0 0;
+  }
+
+  .content {
+    max-width: none;
+    height: auto;
+    border-radius: 0 0 10px 10px;
+  }
+}
+
+/* Desktop: 1440px (ảnh và content cạnh nhau) */
 @media (min-width: 102.8571rem) {
-  /* Your desktop styles here */
+  .container {
+    flex-direction: row;
+  }
+
+  .image,
+  .content {
+    width: 50%;
+  }
+
+  .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  .content {
+    max-width: none;
+    height: auto;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
 }
